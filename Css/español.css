@@ -1,4 +1,5 @@
-body {
+/* Estilos globales */
+body { 
     font-family: Arial, sans-serif; 
     background-color: #f4f4f4; 
     color: #ffffff; 
@@ -6,8 +7,7 @@ body {
     padding: 20px;
 }
 .logo {
-text-align: right;
-
+    text-align: right;
 }
 
 header {
@@ -46,16 +46,16 @@ footer {
 
 .product-promotion {
     text-align: center;
-    margin: 40px 0; /* Espacio superior e inferior */
+    margin: 40px 0;
 }
 
 .product-card {
-    background: #fff; /* Fondo blanco para la tarjeta */
-    border: 2px solid #FFD700; /* Borde dorado */
+    background: #fff; 
+    border: 2px solid #FFD700; 
     border-radius: 10px;
     padding: 20px;
-    max-width: 300px; /* Ancho máximo de la tarjeta */
-    margin: 0 auto; /* Centrar la tarjeta */
+    max-width: 300px; 
+    margin: 0 auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -66,63 +66,120 @@ footer {
 }
 
 .product-card img {
-    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    width: 100%; 
     height: auto;
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 10px;
 }
 
 .product-card h3 {
-    color: #333; /* Color del nombre del producto */
+    color: #333;
     margin: 10px 0;
-    font-size: 1.5em; /* Tamaño del nombre */
+    font-size: 1.5em;
 }
 
 .product-card p {
-    font-size: 1em; /* Tamaño de la descripción */
-    color: #555; /* Color de la descripción */
+    font-size: 1em;
+    color: #555;
     margin: 10px 0;
 }
 
 .price {
-    font-size: 1.3em; /* Tamaño del precio */
-    color: #FFD700; /* Color dorado para el precio */
+    font-size: 1.3em;
+    color: #FFD700;
     margin: 10px 0;
 }
 
 .buy-button {
-    background-color: #4CAF50; /* Color del botón */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px; /* Espaciado interno */
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s;
 }
 
 .buy-button:hover {
-    background-color: #45a049; /* Color al pasar el ratón */
+    background-color: #45a049;
 }
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Evita el scroll */
+    overflow: hidden;
 }
 
 .background-video {
-    position: fixed; /* Fija el video al fondo */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cubre todo el fondo */
-    z-index: -1; /* Asegura que el video esté detrás del contenido */
+    object-fit: cover;
+    z-index: -1;
 }
 
 .content {
-    position: relative; /* Permite que el contenido esté por encima del video */
-    color: white; /* Cambia el color del texto para que sea visible sobre el video */
+    position: relative;
+    color: white;
     padding: 20px;
     text-align: center;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    /* Navegación en dispositivos móviles */
+    nav ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .product-card {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .content h1 {
+        font-size: 1.8em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .buy-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Estilos adicionales para pantallas muy pequeñas */
+    .product-card h3 {
+        font-size: 1.2em;
+    }
+
+    .price {
+        font-size: 1.1em;
+    }
+
+    .buy-button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .content h1 {
+        font-size: 1.5em;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
 }
